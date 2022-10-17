@@ -3,7 +3,7 @@ using System.Runtime.Serialization.Formatters;
 using System.Security.Cryptography;
 using System.Xml;
 
-namespace QuickSoort
+namespace QuickSort
 {
     class Program
     {
@@ -27,9 +27,9 @@ namespace QuickSoort
                 else
                     Console.WriteLine("\n Array can have maximum 20 elements \n");
             }
-            Console.WriteLine("\n==================");
+            Console.WriteLine("\n====================");
             Console.WriteLine("Enter Array Elements");
-            Console.WriteLine("\n==================");
+            Console.WriteLine("\n====================");
 
             //get array elements
             for (int i = 0; i < n; i++)
@@ -38,6 +38,20 @@ namespace QuickSoort
                 string s1 = Console.ReadLine();
                 arr[i] = Int32.Parse(s1);
             }
+
+        }
+        //swaps the element at index x with the element at index y
+        void swap(int x, int y)
+        {
+            int temp;
+            temp = arr[x];
+            arr[x] = arr[y];
+            arr[y] = temp;
+        }
+
+        public void q_sort(int low, int high)
+        {
+
         }
     }
 }
